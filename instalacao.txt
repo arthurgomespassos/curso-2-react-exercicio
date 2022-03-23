@@ -1,0 +1,112 @@
+in 14-react:
+npm init -y
+npm i create-react-app
+npx create-react-app exercicio
+
+in root folder (exercicio):
+cd exercicio
+npm start
+
+// extensão do es lint no vs code tem que estar instalada
+npm i eslint @babel/eslint-parser @babel/preset-react --save-dev
+npx eslint --init
+
+> To check syntax, find problems, and enforce code style
+> Javascript modules (import/export)
+> React
+> No (typescript)
+> Browser
+> Use a popular Style Guide
+> Airbnb
+> Javascript
+> Y
+
+nas config.json do visual Studio Code adicionar:
+  "eslint.validate": [
+    {
+      "language": "javascript",
+      "autoFix": true,
+    },
+    {
+      "language": "javascriptreact",
+      "autoFix": true
+    }
+  ],
+  // "eslint.autoFixOnSave": true,
+  "editor.codeActionsOnSave": {
+    "source.fixAll.eslint": true,
+    "source.fixAll": true
+  },
+  "eslint.workingDirectories": [
+    {
+      "mode": "auto"
+    }
+  ],
+
+start ==> starta em dev
+build ==> builda o bagulho com webpack, babel e etc
+test  ==> 
+eject ==> ejeta os arquivos de configuraçoes pra muda-los, webpack, babel, loader, devserver...
+
+para fazer validação das propriedades dos componentes:
+npm i prop-types
+
+////////////////////////////////////////////////////////////////////////////////
+
+// editor config file START
+# EditorConfig is awesome: https://EditorConfig.org
+
+# top-most EditorConfig file
+root = true
+
+[*]
+indent_style = space
+indent_size = 2
+end_of_line = lf
+charset = utf-8
+trim_trailing_whitespace = true
+insert_final_newline = true
+// editor config file END
+
+////////////////////////////////////////////////////////////////////////////////
+
+
+// .babelrc FILE START
+{
+  "presets": [
+    "@babel/preset-react"
+  ]
+}
+// .babelrc FILE END
+
+////////////////////////////////////////////////////////////////////////////////
+
+// .eslintrc.js FILE START
+module.exports = {
+  env: {
+    browser: true,
+    es2021: true,
+  },
+  extends: [
+    'plugin:react/recommended',
+    'airbnb',
+  ],
+  parser: '@babel/eslint-parser', // added by me
+  parserOptions: {
+    // requireConfigFile: false, // added by me to fix babel error
+    ecmaFeatures: {
+      jsx: true,
+    },
+    ecmaVersion: 'latest',
+    sourceType: 'module',
+  },
+  plugins: [
+    'react',
+  ],
+  rules: {
+    'react/jsx-filename-extension': 'off',
+    'react/state-in-constructor': 'off',
+    'react/forbid-prop-types': 'off',
+  },
+};
+// .eslintrc.js FILE END
