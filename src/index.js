@@ -1,7 +1,7 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import First from './components/First';
+import BomDia from './components/BomDia';
 
 // const elemento = <h1>React 2</h1>;
 
-ReactDOM.render(<First />, document.getElementById('root'));
+ReactDOM.render(<BomDia nome="Arthur" idade="19" />, document.getElementById('root'));
