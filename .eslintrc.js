@@ -19,8 +19,9 @@ module.exports = {
     'react',
   ],
   rules: {
-    'react/jsx-filename-extension': 'off',
-    'react/state-in-constructor': 'off',
-    'react/forbid-prop-types': 'off',
+    'react/jsx-filename-extension': 'off', // permite usar .jsx em arquivos .js sem erro no eslint
+    'react/state-in-constructor': 'off', // não obriga usar o state dentro do constructor permitindo usar diretamente
+    'react/forbid-prop-types': 'off', // não era pra precisar disso mas é um erro ainda não corrigido do eslint
+    'react/function-component-definition': 'off', // permite usar
   },
 };
