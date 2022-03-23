@@ -27,5 +27,8 @@ module.exports = {
     'react/jsx-one-expression-per-line': 'off', // permite escrever coisas como <h1>OI {props.nome}</h1> na mesma linha
     'react/prefer-stateless-function': 'off', // não reclama de eu usar classe nos componentes pra botar estado(state) neles
     'class-methods-use-this': 'off',
+    'react/destructuring-assignment': 'off', // não obriga a usar destructuring, mas é bom deixar ativado, mas nesse exercicio
+    // em especifico foi imporante deixar desativado
+    'import/prefer-default-export': 'off',
   },
 };
